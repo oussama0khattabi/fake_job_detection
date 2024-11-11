@@ -77,7 +77,3 @@ We evaluated the models based on **accuracy**, **precision**, **recall**, and **
 ### Selected Model: Support Vector Machine (SVM)
 - The **SVM model** with a linear kernel and balanced class weights achieved the highest recall while minimizing false negatives. This was critical for our project since missing fraudulent postings would have serious consequences.
 
-## 🔧 Hyperparameter Tuning
-We performed hyperparameter tuning using **GridSearchCV** to optimize the models:
-
-- **Random Forest**: Best parameters were:
