@@ -42,7 +42,7 @@ The data preparation phase involved the following steps:
    - Analyzed correlations between text length and fraudulence to discover patterns.
 
 5. **Train-Test Split**:
-   - Split the dataset into training (80%) and testing (20%) sets using stratified sampling to maintain class balance.
+   - Split the dataset into training (70%) and testing (30%) sets using stratified sampling to maintain class balance.
 
 ## 🚀 Model Training
 The following models were trained on the processed dataset:
@@ -67,12 +67,12 @@ The following models were trained on the processed dataset:
 We evaluated the models based on **accuracy**, **precision**, **recall**, and **F1-score** to find the best model. Given the importance of minimizing **false negatives** (to catch all fraudulent postings), we prioritized recall during the evaluation.
 
 ### Evaluation Results Summary
-| Model                     | Accuracy | Recall | Precision | F1 Score |
-|---------------------------|----------|--------|-----------|----------|
-| Logistic Regression       | 0.85     | 0.78   | 0.82      | 0.80     |
-| Support Vector Machine    | **0.88** | **0.84** | 0.86      | **0.85** |
-| Random Forest             | 0.87     | 0.80   | **0.88**  | 0.83     |
-| Multinomial Naive Bayes   | 0.82     | 0.76   | 0.80      | 0.78     |
+| Model                     | Recall | Precision | F1 Score |
+|---------------------------|--------|-----------|----------|
+| Logistic Regression       | 0.69   | 0.98      | 0.76     |
+| Support Vector Machine    | 0.94   | 0.79      |   0.85   |
+| Random Forest             | 0.82   | 0.99      | 0.89     |
+| Multinomial Naive Bayes   |        | 0.95      |          |
 
 ### Selected Model: Support Vector Machine (SVM)
 - The **SVM model** with a linear kernel and balanced class weights achieved the highest recall while minimizing false negatives. This was critical for our project since missing fraudulent postings would have serious consequences.
